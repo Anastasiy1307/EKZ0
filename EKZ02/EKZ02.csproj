@@ -53,6 +53,8 @@
     <Content Include="diagramm\Диаграмма вариантов использования.jpg" />
     <Content Include="diagramm\Диаграмма деятельности.jpg" />
     <Content Include="diagramm\Диаграмма классов.jpg" />
+    <Content Include="diagramm\Диаграмма компонентов.jpg" />
+    <Content Include="diagramm\Диаграмма последовательности.jpg" />
     <Content Include="diagramm\Диаграмма потоков.jpg" />
     <Content Include="diagramm\Диаграмма развертывания.jpg" />
     <Content Include="diagramm\Диаграмма состояний.jpg" />
