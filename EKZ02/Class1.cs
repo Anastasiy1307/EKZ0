@@ -21,6 +21,9 @@ namespace EKZ02
         /// <param name="pk"></param>
         /// <param name="rv"></param>
         /// <param name="srv"></param>
+       
+
+        
         public static void Critput(int n, int[] i, int[] j, int[] dk,
                        int[] rs, int[] ps, int[] rk, int[] pk, int[] rv, int[] srv)
         {
