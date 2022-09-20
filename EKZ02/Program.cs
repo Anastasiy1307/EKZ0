@@ -28,11 +28,11 @@ namespace EKZ02
             int[] ff = new int[20]; // ff[k] - свободный резерв времени k-й операции.
             int k;      // Параметр цикла.
 
-            Console.Write("Введите общее количество работ по проекту: ");
+            Console.Write("Введите количество работ: ");
             n = int.Parse(Console.ReadLine());
             for (k = 0; k < n; k++)
             {
-                Console.Write("Введите начало, конец дуги и продолжительность: \n");
+                Console.Write("Введите начало, конец дуги(из таблицы) и продолжительность через Enter: \n");
                 i[k] = int.Parse(Console.ReadLine());
                 j[k] = int.Parse(Console.ReadLine());
                 dij[k] = int.Parse(Console.ReadLine());
@@ -57,6 +57,7 @@ namespace EKZ02
             Console.Write("Критический путь: 1 ");
             for (k = 0; k < n; k++)
                 if (tf[k] == 0) Console.Write("{0} ", j[k]);
+             Console.ReadKey();
         }
         public static void Critput(int n, int[] i, int[] j, int[] dij,
                        int[] s1, int[] s2, int[] f1, int[] f2, int[] tf, int[] ff)
