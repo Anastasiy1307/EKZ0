@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="diagramm\Диаграмма вариантов использования.jpg" />
+    <Content Include="diagramm\Диаграмма деятельности.jpg" />
+    <Content Include="diagramm\Диаграмма развертывания.jpg" />
+    <Content Include="diagramm\Диаграмма состояний.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
