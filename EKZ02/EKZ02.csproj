@@ -43,11 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Zadanie\вариант 1 модульный экзамен.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="diagramm\Диаграмма вариантов использования.jpg" />
