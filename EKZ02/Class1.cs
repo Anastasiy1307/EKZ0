@@ -6,26 +6,10 @@ using System.Threading.Tasks;
 
 namespace EKZ02
 {
-    public class Class1
+    public class CalculatingTheCriticalPath
     {
-        /// <summary>
-        /// Метод определяющий критический путь
-        /// </summary>
-        /// <param name="n"></param>
-        /// <param name="i"></param>
-        /// <param name="j"></param>
-        /// <param name="dk"></param>
-        /// <param name="rs"></param>
-        /// <param name="ps"></param>
-        /// <param name="rk"></param>
-        /// <param name="pk"></param>
-        /// <param name="rv"></param>
-        /// <param name="srv"></param>
-       
-
-        
-        public static void Critput(int n, int[] i, int[] j, int[] dk,
-                       int[] rs, int[] ps, int[] rk, int[] pk, int[] rv, int[] srv)
+        public static void СriticalPath(int n, int[] i, int[] j, int[] Vrem_zatr,
+                       int[] Ranniy_srok_nach, int[] Pozdniy_srok_nach, int[] Ranniy_srok_zaver, int[] Pozdniy_srok_zaver, int[] Rezerv_vrem, int[] Svob_rezerv_vrem)
         {
 
             int k, index, max, min;
@@ -45,9 +29,9 @@ namespace EKZ02
 
             for (k = 0; k < n; k++)
             {
-                max = ti[i[k]] + dk[k];
+                max = ti[i[k]] + Vrem_zatr[k];
                 if (ti[j[k]] < max)
-                {
+                {      
                     ti[j[k]] = max;
 
                 }
@@ -56,7 +40,7 @@ namespace EKZ02
             te[j[n - 1]] = ti[j[n - 1]];
             for (k = n - 1; k >= 0; k--)
             {
-                min = te[j[k]] - dk[k];
+                min = te[j[k]] - Vrem_zatr[k];
                 if (te[i[k]] > min)
                 {
                     te[i[k]] = min;
@@ -65,9 +49,9 @@ namespace EKZ02
 
             for (k = 0; k < n; k++)
             {
-                rs[k] = ti[i[k]]; rk[k] = rs[k] + dk[k];
-                pk[k] = te[j[k]]; ps[k] = pk[k] - dk[k];
-                rv[k] = pk[k] - rk[k]; srv[k] = ti[j[k]] - rk[k];
+                Ranniy_srok_nach[k] = ti[i[k]]; Ranniy_srok_zaver[k] = Ranniy_srok_nach[k] + Vrem_zatr[k];
+                Pozdniy_srok_zaver[k] = te[j[k]]; Pozdniy_srok_nach[k] = Pozdniy_srok_zaver[k] - Vrem_zatr[k];
+                Rezerv_vrem[k] = Pozdniy_srok_zaver[k] - Ranniy_srok_zaver[k]; Svob_rezerv_vrem[k] = ti[j[k]] - Ranniy_srok_zaver[k];
 
             }
         }
